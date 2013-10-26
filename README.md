@@ -1,24 +1,41 @@
 [![Build Status](https://secure.travis-ci.org/vesln/nixt.png)](http://travis-ci.org/vesln/nixt)
 
-# Synopsis
+# Nixt
 
-# Description
+## Synopsis
 
-# Installation
+## Description
+
+## Installation
 
 You are being encouraged to install nixt as a development dependency:
 
 ```bash
-npm install nixt --save-dev
+$ npm install nixt --save-dev
 ```
 
-# Examples
+## Examples
 
-# Contributors
+## Tests
 
-# Acknowledgements
+### Running the tests
 
-# License
+```bash
+$ npm install
+$ make test
+```
+
+### Test coverage
+
+```bash
+$ make test-cov
+```
+
+## Contributors
+
+## Acknowledgements
+
+## License
 
 MIT License
 
