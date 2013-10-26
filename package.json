@@ -1,0 +1,31 @@
+{
+  "name": "nixt",
+  "version": "0.0.0",
+  "description": "Simple and powerful testing for command-line apps",
+  "keywords": [
+    "testing",
+    "test",
+    "cli",
+    "command-line",
+    "command-line apps",
+    "command-line applications"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/vesln/nixt",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vesln/nixt.git"
+  },
+  "author": "Veselin Todorov <hi@vesln.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.8.1"
+  }
+}
