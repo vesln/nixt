@@ -18,7 +18,7 @@ describe('nixt#exists', function() {
     .run('node void.js')
     .exists(file)
     .end(function(err) {
-      err.should.be.ok;
+      (err !== null).should.eq(true);
       done();
     });
   });
@@ -37,7 +37,7 @@ describe('nixt#exists', function() {
     .run('node void.js')
     .exists(dir)
     .end(function(err) {
-      err.should.be.ok;
+      (err !== null).should.eq(true);
       done();
     });
   });
