@@ -17,12 +17,4 @@ describe('nixt.register', function() {
     nixt.should.respondTo('baz');
     nixt.should.respondTo('bar');
   });
-
-  it('will throw an error when registering the same function name twice', function() {
-    nixt.register('oops', function(){});
-
-    should.throw(function() {
-      nixt.register('oops', function(){});
-    }, 'Plugin name "oops" already registered');
-  });
 });
