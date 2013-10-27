@@ -2,3 +2,5 @@ coverage.html
 lib-cov/
 node_modules/
 npm-debug.log
+test/tmp/*
+!test/tmp/.keep
