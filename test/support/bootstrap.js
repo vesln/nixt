@@ -1,4 +1,10 @@
 /**
+ * Core dependencies.
+ */
+
+var join = require('path').join;
+
+/**
  * External dependencies.
  */
 
@@ -15,3 +21,9 @@ global.should = chai.should();
  */
 
 chai.Assertion.includeStack = true;
+
+/**
+ * Fixtures path.
+ */
+
+global.FIXTURES = join(__dirname, '..', 'fixtures');

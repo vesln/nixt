@@ -27,5 +27,8 @@
   "devDependencies": {
     "mocha": "~1.13.0",
     "chai": "~1.8.1"
+  },
+  "dependencies": {
+    "assertion-error": "~1.0.0"
   }
 }
