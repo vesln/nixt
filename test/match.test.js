@@ -20,7 +20,7 @@ describe('nixt#match', function() {
     .end(done);
   });
 
-  it('returns an error when stdout does not match the desired string', function(done) {
+  it('returns an error when the contents does not match the desired string', function(done) {
     nfixt()
     .writeFile(file, 'Hello')
     .run('node void.js')
