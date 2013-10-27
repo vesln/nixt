@@ -11,7 +11,7 @@ describe('nixt#code', function() {
     .run('node code-0.js')
     .code(1)
     .end(function(err) {
-      err.message.should.eq('[Code] `node code-0.js`: Expected exit code: "1", actual: "0"');
+      err.message.should.eq('`node code-0.js`: Expected exit code: "1", actual: "0"');
       done();
     });
   });

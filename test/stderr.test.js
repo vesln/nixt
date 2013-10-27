@@ -11,7 +11,7 @@ describe('nixt#stderr', function() {
     .run('node hello-err.js')
     .stderr('Fail')
     .end(function(err) {
-      err.message.should.eq('[Stderr] `node hello-err.js`: Expected "Fail" to match "Hello"');
+      err.message.should.eq('`node hello-err.js`: Expected stderr to match "Fail". Actual: "Hello"');
       done();
     });
   });
@@ -28,7 +28,7 @@ describe('nixt#stderr', function() {
     .run('node hello-err.js')
     .stderr(/Fail/)
     .end(function(err) {
-      err.message.should.eq('[Stderr] `node hello-err.js`: Expected "/Fail/" to match "Hello"');
+      err.message.should.eq('`node hello-err.js`: Expected stderr to match "/Fail/". Actual: "Hello"');
       done();
     });
   });
