@@ -4,6 +4,8 @@
 
 ## Synopsis
 
+## Description
+
 ### Simple
 
 ### Complex
@@ -11,8 +13,6 @@
 ### Order
 
 ### Plugins
-
-## Description
 
 ## Installation
 
