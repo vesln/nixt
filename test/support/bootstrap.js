@@ -35,8 +35,7 @@ chai.Assertion.includeStack = true;
 var nfixt = nixt().cwd(join(__dirname, '..', 'fixtures'));
 
 /**
- * A helper method that will return a new
- * nixt instance with the fixtures path as a CWD.
+ * A helper method that will clone `nfixt`.
  *
  * @returns {Runner}
  * @api public
