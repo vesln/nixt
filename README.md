@@ -22,6 +22,10 @@
 
 ### Plugins
 
+### Usage with a test runner
+
+### Usage without a test runner
+
 ## API
 
 ## Installation
