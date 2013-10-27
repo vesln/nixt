@@ -11,6 +11,12 @@ var join = require('path').join;
 var chai = require('chai');
 
 /**
+ * Internal dependencies.
+ */
+
+var nixt = require('../..');
+
+/**
  * Register `should`.
  */
 
@@ -23,7 +29,19 @@ global.should = chai.should();
 chai.Assertion.includeStack = true;
 
 /**
- * Fixtures path.
+ * Nixt template that has the fixtures dir as a CWD.
  */
 
-global.FIXTURES = join(__dirname, '..', 'fixtures');
+var nfixt = nixt().cwd(join(__dirname, '..', 'fixtures'));
+
+/**
+ * A helper method that will return a new
+ * nixt instance with the fixtures path as a CWD.
+ *
+ * @returns {Runner}
+ * @api public
+ */
+
+global.nfixt = function() {
+  return nfixt.clone();
+};
