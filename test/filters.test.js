@@ -16,7 +16,7 @@ describe('nixt filters', function() {
     })
     .before(function(next) {
       before++;
-      fs.existsSync(file1).should.be.true;
+      fs.existsSync(file1).should.eq(true);
       fs.writeFile(file2, '', next);
     })
     .after(function() {
@@ -30,8 +30,8 @@ describe('nixt filters', function() {
       before.should.eq(2);
       after.should.eq(1);
 
-      fs.existsSync(file1).should.be.false;
-      fs.existsSync(file2).should.be.false;
+      fs.existsSync(file1).should.eq(false);
+      fs.existsSync(file2).should.eq(false);
 
       done();
     });

@@ -1,6 +1,6 @@
 var fs = require('fs');
 var join = require('path').join;
-var file = join(__dirname, 'tmp', 'writefile-test')
+var file = join(__dirname, 'tmp', 'writefile-test');
 
 describe('nixt#writeFile', function() {
   it('creates a new file', function(done) {
