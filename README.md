@@ -4,17 +4,21 @@
 
 ## Synopsis
 
+### Simple
+
+### Complex
+
+### Order
+
+### Plugins
+
 ## Description
 
 ## Installation
 
-You are being encouraged to install nixt as a development dependency:
-
 ```bash
-$ npm install nixt --save-dev
+$ npm install nixt
 ```
-
-## Examples
 
 ## Tests
 
@@ -33,11 +37,15 @@ $ make test-cov
 
 ## Contributors
 
-## Acknowledgements
+## Support the author
+
+Do you like this project? Star the repository, spread the word - it really helps. You may want to follow
+me on [Twitter](https://twitter.com/vesln) and
+[GitHub](https://github.com/vesln). Thanks!
 
 ## License
 
-MIT License
+**MIT License**
 
 Copyright (C) 2013 Veselin Todorov (hi@vesln.com)
 
