@@ -10,9 +10,19 @@
 
 ### Complex
 
+### Formatting options
+
 ### Order
 
+### Templates
+
+### Custom expectations
+
+### Custom middlewares
+
 ### Plugins
+
+## API
 
 ## Installation
 
