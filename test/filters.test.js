@@ -16,6 +16,7 @@ describe('nixt filters', function() {
     })
     .before(function(next) {
       before++;
+      fs.existsSync(file1).should.be.true;
       fs.writeFile(file2, '', next);
     })
     .after(function() {
