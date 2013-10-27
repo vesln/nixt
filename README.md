@@ -53,6 +53,8 @@ Do you like this project? Star the repository, spread the word - it really helps
 me on [Twitter](https://twitter.com/vesln) and
 [GitHub](https://github.com/vesln). Thanks!
 
+## Feedback
+
 ## License
 
 **MIT License**
