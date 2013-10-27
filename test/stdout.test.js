@@ -1,5 +1,3 @@
-var nixt = require('..');
-
 describe('nixt#stdout', function() {
   it('can assert with strings', function(done) {
     nfixt()
