@@ -64,13 +64,78 @@ something that lives in every command-line app that you are going to build.
 
 ### #rmdir
 
+Remove a directory.
+
+``js
+nixt()
+.mkdir('xml-database')
+.run('this does stuff with the xml-database directory')
+.rmdir('xml-database')
+.end(fn);
+```
+
 ### #unlink
+
+Unlink a file.
+
+``js
+nixt()
+.touch('my-file')
+.run('this does stuff with my file')
+.unlink('my-file')
+.end(fn);
+```
 
 ### #end
 
+Run the given test.
+
+```js
+nixt()
+.run('ls')
+.stdout('this-is-not-porn-i-promise')
+.end(function(err) {
+
+});
+```
+
+The same might be accomplished with supplying a function to `run`:
+
+```js
+nixt()
+.stdout('this-is-not-porn-i-promise')
+.run('ls', function(err) {
+
+})
+```
+
 ### #clone
 
+Deep clone a Nixt instance.
+
+```js
+var clone = nixt()
+.before(fn)
+.after(fn)
+.run('my awesome command')
+.end()
+.clone();
+```
+
 ### #expect
+
+Register a custom expectation.
+
+```js
+nixt()
+.expect(function(result) {
+  if (result.stdout !== 'Unicorns') {
+    return new Error('OMG');
+  }
+})
+.run('ls')
+.end(fn);
+```
 
 ## Installation
 
