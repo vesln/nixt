@@ -66,7 +66,7 @@ something that lives in every command-line app that you are going to build.
 
 Remove a directory.
 
-``js
+```js
 nixt()
 .mkdir('xml-database')
 .run('this does stuff with the xml-database directory')
@@ -78,7 +78,7 @@ nixt()
 
 Unlink a file.
 
-``js
+```js
 nixt()
 .touch('my-file')
 .run('this does stuff with my file')
