@@ -5,6 +5,8 @@
 
 ## Synopsis
 
+Simple and powerful end-to-end testing for command-line apps.
+
 ## Description
 
 ### Simple
