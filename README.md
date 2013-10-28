@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/vesln/nixt.png)](http://travis-ci.org/vesln/nixt)
+[![Coverage Status](https://coveralls.io/repos/vesln/nixt/badge.png?branch=master)](https://coveralls.io/r/vesln/nixt?branch=master)
 
 # Nixt
 
