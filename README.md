@@ -42,17 +42,82 @@ something that lives in every command-line app that you are going to build.
 
 ### #cwd
 
+Change the current working directory of the main command (specified with `run`).
+Please not that this won't affect any other commands like `unlink` etc.
+
+```js
+nixt()
+.cwd(path.join(__dirname, 'node_modules', '.bin')
+.run('mocha --version')
+.stdout('1.13.0)
+.end();
+```
+
 ### #run
 
 ### #timeout
 
+Set a timeout for the main command that you are about to test.
+
+```js
+nixt()
+.timeout(1) // ms
+.run('cat /dev/null')
+.end(fn);
+```
+
 ### #stdout
+
+Set expectations on stdout.
+
+```js
+nixt()
+.stdout('LICENSE Makefile')
+.run('ls')
+.end(fn);
+```
+
+Works with regular expressions too.
+
+```js
+nixt()
+.stdout(/system/)
+.run('time')
+.end(fn);
+```
 
 ### #stderr
 
+Same as `stdout` but well.. surprise works with stderr.
+
+```js
+nixt()
+.run('todo add')
+.stderr('Please speicfy a todo')
+.end(fn);
+```
+
 ### #code
 
+Expect a given exit code.
+
+```js
+nixt()
+.run('todo add')
+.code(1)
+.end(fn);
+```
+
 ### #exist
+
+Check if a given path exists (works with both files and directories).
+
+```js
+nixt()
+.run('mkdir /tmp/test')
+.exist('/tmp/test')
+.end(fn);
+```
 
 ### #match
 
