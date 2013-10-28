@@ -16,10 +16,24 @@ clean:
 	rm -f coverage.html
 
 test-cov: lib-cov
-	@NIXT_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
+	@NIXT_COV=1 NODE_ENV=test ./node_modules/.bin/mocha \
+		--reporter html-cov \
+		test/*.test.js \
+		> coverage.html
 
 lib-cov:
-	@rm -fr ./$@
-	@jscoverage lib $@
+	@rm -rf lib-cov
+	@./node_modules/jscoverage/bin/jscoverage lib lib-cov
 
-.PHONY: test-cov test jshint
+test-coveralls: lib-cov
+	@NIXT_COV=1 NODE_ENV=test ./node_modules/.bin/mocha \
+		--reporter mocha-lcov-reporter \
+		test/*.test.js \
+		| ./node_modules/coveralls/bin/coveralls.js
+
+test-travisci: lib-cov
+	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
+	@make test-node
+	@make test-coveralls
+
+.PHONY: test-cov test jshint lib-cov
