@@ -33,7 +33,7 @@ test-coveralls: lib-cov
 
 test-travisci: lib-cov
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
-	@make test-node
+	@make test
 	@make test-coveralls
 
 .PHONY: test-cov test jshint lib-cov
