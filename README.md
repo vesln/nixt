@@ -38,7 +38,27 @@ something that lives in every command-line app that you are going to build.
 
 ### #before
 
+Register a "before" middleware.
+
+```js
+nixt()
+.before(fn)
+.before(fn2)
+.run(cmd)
+.end();
+```
+
 ### #after
+
+Register an "after" middleware.
+
+```js
+nixt()
+.run(cmd)
+.after(fn)
+.after(fn2)
+.end();
+```
 
 ### #cwd
 
@@ -49,11 +69,28 @@ Please not that this won't affect any other commands like `unlink` etc.
 nixt()
 .cwd(path.join(__dirname, 'node_modules', '.bin')
 .run('mocha --version')
-.stdout('1.13.0)
+.stdout('1.13.0')
 .end();
 ```
 
 ### #run
+
+Set a primary command to execute:
+
+```js
+nixt()
+.run('node --version')
+.stdout('0.10.16')
+.end(fn);
+```
+
+You could also run the test right after specifying the command to run:
+
+```js
+nixt()
+.stdout('0.10.16')
+.run('node --version', fn)
+```
 
 ### #timeout
 
@@ -121,11 +158,70 @@ nixt()
 
 ### #match
 
+Check the contents of a file.
+
+```js
+nfixt()
+.writeFile(file, 'Hello')
+.run('node void.js')
+.match(file, 'Hello')
+.unlink(file)
+.end(done);
+```
+
+```js
+nfixt()
+.writeFile(file, 'Hello')
+.run('node void.js')
+.match(file, /ello/)
+.unlink(file)
+.end(done);
+```
+
 ### #mkdir
+
+Create a new directory.
+
+```js
+nixt()
+.mkdir('xml-database')
+.run('this does stuff with the xml-database directory')
+.end(fn);
+```
 
 ### #exec
 
+Execute a given command.
+
+```js
+nixt()
+.touch('LICENSE')
+.exec('git add -a')
+.exec('git commit -m "Add LICENSE"')
+.run('git log')
+.stdout(/LICENSE/)
+.end();
+```
+
 ### #writeFile
+
+Create a file with or without given contents.
+
+Without:
+
+```js
+nixt()
+.writeFile(pathToFile)
+.end();
+```
+
+With:
+
+```js
+nixt()
+.writeFile(pathToFile, data)
+.end();
+```
 
 ### #rmdir
 
