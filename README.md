@@ -29,6 +29,42 @@
 
 ## API
 
+### #before
+
+### #after
+
+### #cwd
+
+### #run
+
+### #timeout
+
+### #stdout
+
+### #stderr
+
+### #code
+
+### #exist
+
+### #match
+
+### #mkdir
+
+### #exec
+
+### #writeFile
+
+### #rmdir
+
+### #unlink
+
+### #end
+
+### #clone
+
+### #expect
+
 ## Installation
 
 ```bash
@@ -50,6 +86,12 @@ $ make test
 $ make test-cov
 ```
 
+### JSlint
+
+```bash
+$ make jshint
+```
+
 ## Contributors
 
 ## Support the author
@@ -57,8 +99,6 @@ $ make test-cov
 Do you like this project? Star the repository, spread the word - it really helps. You may want to follow
 me on [Twitter](https://twitter.com/vesln) and
 [GitHub](https://github.com/vesln). Thanks!
-
-## Feedback
 
 ## License
 
