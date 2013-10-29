@@ -466,7 +466,8 @@ $ make jshint
 
 Special thanks to:
 
-  - [Martin Lazarov](https://github.com/mlazarov)
+  - [Alexander Petkov](https://dribbble.com/apetkov) - logo design
+  - [Martin Lazarov](https://github.com/mlazarov) - various ideas
 
 ## Support the author
 
