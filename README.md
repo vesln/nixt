@@ -1,7 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/vesln/nixt.png)](http://travis-ci.org/vesln/nixt)
 [![Coverage Status](https://coveralls.io/repos/vesln/nixt/badge.png?branch=master)](https://coveralls.io/r/vesln/nixt?branch=master)
 
-# Nixt
+![Nixt](http://i.imgur.com/aBudpSE.jpg)
 
 ## Synopsis
 
@@ -14,25 +14,150 @@ plays nice with the testing tools that you are already using and in case you are
 one of those guys who practice outside-in BDD, it has the potential to become
 something that lives in every command-line app that you are going to build.
 
-### Simple
+### How it looks
 
-### Complex
+```js
+var nixt = require('nixt');
+
+nixt()
+.touch('/tmp/test')
+.run('ls /tmp/')
+.stdout(/test/)
+.end();
+```
 
 ### Formatting options
 
-### Commands & Order
+Nixt can strip newlines and colors. You can tell it to do so by passing an
+object that looks like this:
 
-### Templates
+```js
+var options = {
+  colors: false,
+  newlines: false,
+};
+
+nixt(options).stdout...
+```
 
 ### Custom expectations
 
+While Nixt comes with built-in expectations, you can use your own too.
+
+```js
+nixt()
+.expect(function(result) {
+  if (result.stdout !== 'unicorns') {
+    return new Error('NO!');
+  }
+})
+.run('unicorns')
+.end(fn);
+```
+
 ### Custom middlewares
+
+You can register as many before and after middlewares as you wish.
+
+```js
+nixt()
+.before(setupDatabase)
+.before(runMigrations)
+.run(cmd)
+.after(downgradeCron)
+.after(deleteDatabase)
+.end();
+```
+
+### Middleware order
+
+The Middleware execution order is very simple - "before" middlewares always run
+before everything else, "after" middlewares always run after everything else.
+The other middlewares will match the order that you have specified.
+
+```js
+nixt()
+.before(before1)
+.before(before2)
+.after(after1)
+.after(after2)
+.touch(file)
+.run(cmd)
+.unlink(file)
+.end(fn)
+
+// Execution order:
+// before1, before2, touch, cmd, unlink, after1, after2
+```
+
+You may also want to reuse before and after middlewares as much as possible,
+especially when testing something that requires extensive setup and cleanup. You
+can accomplish this by cloning a Nixt instance.
+
+```js
+var base = nixt()
+  .before(setupDatabase)
+  .after(removeDatabase);
+
+// Later on
+
+base.clone().run....
+```
 
 ### Plugins
 
+Nixt has primitive support for plugins. You can register any expectation or/and
+any middleware by calling `nixt.register`.
+
+```js
+var fn = function() {};
+nixt.register('foo', fn);
+```
+
+Or you may want to register many functions at once.
+
+```js
+var fn = function() {};
+var fn1 = function() {};
+nixt.register({ baz: fn, bar: fn1 });
+```
+
 ### Usage with a test runner
 
+Nixt plays nice with any test runner out there. Here is a minimal example how
+you could use it with Mocha.
+
+```js
+describe('todo add', function() {
+  it('adds a new todo item', function(done) {
+    nixt()
+    .run('todo add')
+    .stdout('A new todo has been added')
+    .end(done);
+  });
+});
+```
+
 ### Usage without a test runner
+
+While using a test runner is recommended nixt is completely 'nodeable'. Here is
+a simple example how you could accomplish that:
+
+```js
+var assert = require('assert');
+
+function refute(err) {
+  assert(!err);
+}
+
+nixt()
+.run(cmd)
+.end(end);
+
+nixt()
+.run(anotherCmd)
+.end(end);
+```
 
 ## API
 
@@ -67,7 +192,7 @@ Please not that this won't affect any other commands like `unlink` etc.
 
 ```js
 nixt()
-.cwd(path.join(__dirname, 'node_modules', '.bin')
+.cwd(path.join(__dirname, 'node_modules', '.bin'))
 .run('mocha --version')
 .stdout('1.13.0')
 .end();
