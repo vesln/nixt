@@ -452,6 +452,16 @@ $ make jshint
 
 ## Contributors
 
+```
+ project  : nixt
+ repo age : 3 days
+ active   : 3 days
+ commits  : 52
+ files    : 49
+ authors  :
+    52	Veselin Todorov         100.0%
+```
+
 ## Credits
 
 Special thanks to:
