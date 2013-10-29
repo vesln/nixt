@@ -152,11 +152,11 @@ function refute(err) {
 
 nixt()
 .run(cmd)
-.end(end);
+.end(refute);
 
 nixt()
 .run(anotherCmd)
-.end(end);
+.end(refute);
 ```
 
 ## API
@@ -286,7 +286,7 @@ nixt()
 Check the contents of a file.
 
 ```js
-nfixt()
+nixt()
 .writeFile(file, 'Hello')
 .run('node void.js')
 .match(file, 'Hello')
@@ -295,7 +295,7 @@ nfixt()
 ```
 
 ```js
-nfixt()
+nixt()
 .writeFile(file, 'Hello')
 .run('node void.js')
 .match(file, /ello/)
