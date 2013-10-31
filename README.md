@@ -1,5 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/vesln/nixt.png)](http://travis-ci.org/vesln/nixt)
 [![Coverage Status](https://coveralls.io/repos/vesln/nixt/badge.png?branch=master)](https://coveralls.io/r/vesln/nixt?branch=master)
+[![Code Climate](https://codeclimate.com/github/vesln/nixt.png)](https://codeclimate.com/github/vesln/nixt)
 
 ![Nixt](http://i.imgur.com/aBudpSE.jpg)
 
