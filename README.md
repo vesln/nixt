@@ -454,13 +454,14 @@ $ make jshint
 ## Contributors
 
 ```
- project  : nixt
- repo age : 3 days
- active   : 3 days
- commits  : 52
- files    : 49
+project  : nixt
+ repo age : 5 days
+ active   : 4 days
+ commits  : 59
+ files    : 50
  authors  :
-    52	Veselin Todorov         100.0%
+    58	Veselin Todorov         98.3%
+     1	Radoslav Stankov        1.7%
 ```
 
 ## Credits
@@ -469,6 +470,7 @@ Special thanks to:
 
   - [Alexander Petkov](https://dribbble.com/apetkov) - logo design
   - [Martin Lazarov](https://github.com/mlazarov) - various ideas
+  - [Radoslav Stankov](https://github.com/rstankov)
 
 ## Support the author
 
