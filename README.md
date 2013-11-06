@@ -234,7 +234,7 @@ nixt()
 
 ### #env
 
-Set environment variables
+Set environment variables.
 
 ```js
 nixt()
