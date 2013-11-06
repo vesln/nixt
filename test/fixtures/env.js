@@ -1,4 +1,4 @@
-if (process.env.hello && process.env.bye) {
+if (process.env.HELLO && process.env.BYE) {
   process.exit(0);
 }
 
