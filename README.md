@@ -232,6 +232,19 @@ nixt()
 .run('node --version', fn)
 ```
 
+### #env
+
+Set environment variables
+
+```js
+nixt()
+.env('foo', 'bar')
+.env('baz', 'boo')
+.run('node --version')
+.stdout('0.10.16')
+.end(fn);
+```
+
 ### #timeout
 
 Set a timeout for the main command that you are about to test.
