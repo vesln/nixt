@@ -200,6 +200,19 @@ nixt()
 .end();
 ```
 
+### #base
+
+Set a base command. Useful for templates.
+
+```js
+nixt()
+.cwd(path.join(__dirname, 'node_modules', '.bin'))
+.base('mocha ')
+.run('--version')
+.stdout('1.13.0')
+.end();
+```
+
 ### #run
 
 Set a primary command to execute:
