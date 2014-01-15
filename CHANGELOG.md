@@ -1,4 +1,10 @@
 
+0.1.0 / 2014-01-15
+==================
+
+  * Provide extra assertion properties
+  * Update regexes so that it doesn't strip first \n
+
 0.0.4 / 2013-11-06
 ==================
 
