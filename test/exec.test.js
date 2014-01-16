@@ -11,4 +11,20 @@ describe('nixt#exec', function() {
     .unlink(file)
     .end(done);
   });
+
+  it('respects the current working directory', function(done) {
+    var root = join(__dirname, 'tmp');
+    var fixture = join(root, 'foo.tmp.js');
+
+    nfixt()
+    .cwd(root)
+    .exec('touch foo.tmp.js')
+    .run('')
+    .end(function(err) {
+      should.not.exist(err);
+      fs.existsSync(fixture).should.be.true;
+      fs.unlinkSync(fixture);
+      done();
+    })
+  });
 });
