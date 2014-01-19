@@ -1,2 +1,0 @@
---require ./test/support/bootstrap.js
---slow 5000

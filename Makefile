@@ -1,12 +1,7 @@
-REPORTER ?= dot
-
 check: jshint test
 
 test:
-	@NODE_ENV=test ./node_modules/.bin/mocha \
-		--reporter $(REPORTER) \
-		--ui bdd \
-		test/*.test.js
+	@NODE_ENV=test ./node_modules/.bin/hydro
 
 jshint:
 	@./node_modules/.bin/jshint .

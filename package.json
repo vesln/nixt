@@ -25,12 +25,14 @@
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.13.0",
     "chai": "~1.8.1",
     "jshint": "~2.3.0",
     "coveralls": "~2.3.0",
     "jscoverage": "~0.3.8",
-    "mocha-lcov-reporter": "0.0.1"
+    "hydro": "~0.8.9",
+    "hydro-dot": "~1.0.5",
+    "hydro-chai": "~0.1.3",
+    "hydro-bdd": "~0.1.0"
   },
   "dependencies": {
     "assertion-error": "~1.0.0",
