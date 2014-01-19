@@ -1,7 +1,5 @@
 [![NPM version](https://badge.fury.io/js/nixt.png)](http://badge.fury.io/js/nixt)
 [![Build Status](https://secure.travis-ci.org/vesln/nixt.png)](http://travis-ci.org/vesln/nixt)
-[![Coverage Status](https://coveralls.io/repos/vesln/nixt/badge.png?branch=master)](https://coveralls.io/r/vesln/nixt?branch=master)
-[![Code Climate](https://codeclimate.com/github/vesln/nixt.png)](https://codeclimate.com/github/vesln/nixt)
 
 ![Nixt](http://i.imgur.com/aBudpSE.jpg)
 
@@ -474,33 +472,7 @@ $ npm install nixt
 ### Running the tests
 
 ```bash
-$ npm install
-$ make test
-```
-
-### Test coverage
-
-```bash
-$ make test-cov
-```
-
-### JSlint
-
-```bash
-$ make jshint
-```
-
-## Contributors
-
-```
-project  : nixt
- repo age : 5 days
- active   : 4 days
- commits  : 59
- files    : 50
- authors  :
-    58	Veselin Todorov         98.3%
-     1	Radoslav Stankov        1.7%
+$ make
 ```
 
 ## Credits
