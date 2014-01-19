@@ -356,6 +356,18 @@ nixt()
 .end();
 ```
 
+By default the commands will inherit the "world" for the main command which
+includes environment variables, cwd, timeout. However, you can override this by
+supplying a different "world":
+
+```js
+nixt()
+.exec('git add LICENSE', { timeout: 4, cwd: '/tmp' })
+.run('git log')
+.stdout(/LICENSE/)
+.end();
+```
+
 ### #writeFile
 
 Create a file with or without given contents.
