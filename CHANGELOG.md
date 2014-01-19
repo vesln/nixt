@@ -1,4 +1,10 @@
 
+0.3.0 / 2014-01-19
+==================
+
+  * Setup commands can have their own world
+  * `exec` commands inherit the world of the main command by default
+
 0.2.0 / 2014-01-16
 ==================
 
