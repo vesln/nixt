@@ -11,7 +11,7 @@ Simple and powerful end-to-end testing for command-line apps.
 
 Nixt is aiming to make testing of command-line apps as simple as possible. It
 plays nice with the testing tools that you are already using and in case you are
-one of those guys who practice outside-in BDD, it has the potential to become
+one of those devs who practice outside-in BDD, it has the potential to become
 something that lives in every command-line app that you are going to build.
 
 ### How it looks
