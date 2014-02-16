@@ -188,7 +188,7 @@ nixt()
 ### #cwd
 
 Change the current working directory of the main command (specified with `run`).
-Please not that this won't affect any other commands like `unlink` etc.
+Please note that this won't affect any other commands like `unlink` etc.
 
 ```js
 nixt()
