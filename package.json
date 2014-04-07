@@ -25,11 +25,11 @@
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
   "devDependencies": {
-    "chai": "~1.8.1",
-    "hydro": "~0.8.9",
-    "hydro-dot": "~1.0.5",
-    "hydro-chai": "~0.1.3",
-    "hydro-bdd": "~0.1.0"
+    "chai": "*",
+    "hydro": "*",
+    "hydro-dot": "*",
+    "hydro-chai": "*",
+    "hydro-bdd": "*"
   },
   "dependencies": {
     "assertion-error": "~1.0.0",
