@@ -29,11 +29,13 @@
     "hydro": "*",
     "hydro-dot": "*",
     "hydro-chai": "*",
-    "hydro-bdd": "*"
+    "hydro-bdd": "*",
+    "prompt": "^0.2.12"
   },
   "dependencies": {
     "assertion-error": "~1.0.0",
     "clone": "~0.1.11",
-    "shell-quote": "^1.4.1"
+    "shell-quote": "^1.4.1",
+    "string": "^1.8.1"
   }
 }
