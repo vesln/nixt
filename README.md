@@ -159,6 +159,20 @@ nixt()
 .end(refute);
 ```
 
+### Responding to interactive prompts
+
+Nixt can respond to apps that run interactively using the `on()` and
+`respond()` functions.
+
+```js
+nixt()
+.run(cmd)
+.on('Your name: ').respond('Joe User\n')
+.end();
+```
+
+See `test/prompt.test.js` for more examples.
+
 ## API
 
 ### #before
@@ -409,6 +423,24 @@ nixt()
 .unlink('my-file')
 .end(fn);
 ```
+
+### #on
+
+Detect a prompt for user input. Accepts a String or RegExp that appears in
+the the stdout stream. Must be paired with #respond.
+
+```js
+nixt()
+.run(cmd)
+.on('Your name: ').respond('Joe User\n')
+.end();
+```
+
+### #respond
+
+Write a response to the stdin stream when a prompt is detected.
+
+See #on
 
 ### #end
 
