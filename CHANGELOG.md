@@ -1,4 +1,12 @@
 
+0.4.0 / 2014-07-22
+==================
+
+  * Nixt can detect and respond to interactive prompts
+  * Removes erroneous console.log
+  * s/Please not/Please note/
+  * Gender-neutral language
+
 0.3.0 / 2014-01-19
 ==================
 
