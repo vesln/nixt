@@ -1,6 +1,6 @@
 {
   "name": "nixt",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Simple and powerful testing for command-line apps",
   "keywords": [
     "testing",
