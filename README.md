@@ -244,6 +244,18 @@ nixt()
 .run('node --version', fn)
 ```
 
+### #stdin
+
+Set the contents of stdin.
+
+```js
+nixt()
+.stdin('foo')
+.run('node -e "process.stdin.pipe(process.stdout)"')
+.stdout('foo')
+.end(fn);
+```
+
 ### #env
 
 Set environment variables.
