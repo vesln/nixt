@@ -244,6 +244,18 @@ nixt()
 .run('node --version', fn)
 ```
 
+### #stdin
+
+Set the contents of stdin.
+
+```js
+nixt()
+.stdin('foobar')
+.run('rev')
+.stdout('raboof')
+.end(fn);
+```
+
 ### #env
 
 Set environment variables.
