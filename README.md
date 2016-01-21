@@ -206,9 +206,9 @@ Please note that this won't affect any other commands like `unlink` etc.
 
 ```js
 nixt()
-.cwd(path.join(__dirname, 'node_modules', '.bin'))
-.run('mocha --version')
-.stdout('1.13.0')
+.cwd(__dirname)
+.run('pwd')
+.stdout(/test$/)
 .end();
 ```
 
@@ -218,10 +218,9 @@ Set a base command. Useful for templates.
 
 ```js
 nixt()
-.cwd(path.join(__dirname, 'node_modules', '.bin'))
-.base('mocha ')
+.base('node ')
 .run('--version')
-.stdout('1.13.0')
+.stdout('0.10.16')
 .end();
 ```
 
