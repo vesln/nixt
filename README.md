@@ -250,9 +250,9 @@ Set the contents of stdin.
 
 ```js
 nixt()
-.stdin('foo')
-.run('node -e "process.stdin.pipe(process.stdout)"')
-.stdout('foo')
+.stdin('foobar')
+.run('rev')
+.stdout('raboof')
 .end(fn);
 ```
 
