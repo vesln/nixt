@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "assertion-error": "~1.0.0",
-    "clone": "~0.1.11",
+    "clone": "^1.0.2",
     "shell-quote": "^1.4.1",
-    "string": "^1.8.1"
+    "string": "^3.3.1"
   }
 }
