@@ -1,3 +1,9 @@
+0.5.0 / 2016-01-21
+==================
+
+  * Remove dubious `node_modules/.bin` from examples (#11)
+  * Add #stdin method (#14)
+  * Wait for standard IO streams to close (#15)
 
 0.4.1 / 2014-08-03
 ==================
