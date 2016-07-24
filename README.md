@@ -20,7 +20,7 @@ something that lives in every command-line app that you are going to build.
 var nixt = require('nixt');
 
 nixt()
-.touch('/tmp/test')
+.exec('touch /tmp/test')
 .run('ls /tmp/')
 .stdout(/test/)
 .end();
@@ -81,13 +81,13 @@ nixt()
 .before(before2)
 .after(after1)
 .after(after2)
-.touch(file)
+.writeFile(file, '')
 .run(cmd)
 .unlink(file)
 .end(fn)
 
 // Execution order:
-// before1, before2, touch, cmd, unlink, after1, after2
+// before1, before2, writeFile, cmd, unlink, after1, after2
 ```
 
 You may also want to reuse before and after middlewares as much as possible,
@@ -371,7 +371,7 @@ Execute a given command.
 
 ```js
 nixt()
-.touch('LICENSE')
+.writeFile('LICENSE', 'MIT License')
 .exec('git add -a')
 .exec('git commit -m "Add LICENSE"')
 .run('git log')
@@ -429,7 +429,7 @@ Unlink a file.
 
 ```js
 nixt()
-.touch('my-file')
+.writeFile('my-file', data)
 .run('this does stuff with my file')
 .unlink('my-file')
 .end(fn);
