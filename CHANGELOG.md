@@ -1,3 +1,9 @@
+0.5.1 / 2018-08-29
+==================
+
+  * Update docs: remove mentions of unimplemented #touch method (#16)
+  * Remove string.js dependency that adds a security vulnerability (#18)
+
 0.5.0 / 2016-01-21
 ==================
 
