@@ -1,5 +1,5 @@
-[![NPM version](https://badge.fury.io/js/nixt.png)](http://badge.fury.io/js/nixt)
-[![Build Status](https://secure.travis-ci.org/vesln/nixt.png)](http://travis-ci.org/vesln/nixt)
+[![NPM version](https://badge.fury.io/js/nixt.svg)](http://badge.fury.io/js/nixt)
+[![Build Status](https://secure.travis-ci.org/vesln/nixt.svg)](http://travis-ci.org/vesln/nixt)
 
 ![Nixt](http://i.imgur.com/aBudpSE.jpg)
 
