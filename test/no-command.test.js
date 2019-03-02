@@ -1,9 +1,9 @@
-var nixt = require('..');
+const nixt = require('..');
 
-describe('nixt#run', function() {
-  it('throws an error when no command is supplied', function() {
-    should.throw(function() {
-      nixt().end(function() {});
+describe('nixt#run', () => {
+  it('throws an error when no command is supplied', () => {
+    should.throw(() => {
+      nixt().end(() => {});
     }, 'Please provide a command to run. Hint: `nixt#run`');
   });
 });

@@ -1,40 +1,40 @@
-var nixt = require('..');
-var join = require('path').join;
+const nixt = require('..');
+const { join } = require('path');
 
-describe('nixt', function() {
-  it('can strip \\n from stdout and stderr', function(done) {
+describe('nixt', () => {
+  it('can strip \\n from stdout and stderr', (done) => {
     nixt({ newlines: false })
-    .cwd(join(__dirname, 'fixtures'))
-    .run('node newlines.js')
-    .stdout('Hello from newlines.js')
-    .stderr('Error from newlines.js')
-    .end(done);
+      .cwd(join(__dirname, 'fixtures'))
+      .run('node newlines.js')
+      .stdout('Hello from newlines.js')
+      .stderr('Error from newlines.js')
+      .end(done);
   });
-  
-  it('can leave \\n in stdout and stderr', function(done) {
+
+  it('can leave \\n in stdout and stderr', (done) => {
     nixt({ newlines: true })
-    .cwd(join(__dirname, 'fixtures'))
-    .run('node newlines.js')
-    .stdout('Hello \nfrom \nnewlines.js')
-    .stderr('Error \nfrom \nnewlines.js')
-    .end(done);
+      .cwd(join(__dirname, 'fixtures'))
+      .run('node newlines.js')
+      .stdout('Hello \nfrom \nnewlines.js')
+      .stderr('Error \nfrom \nnewlines.js')
+      .end(done);
   });
-  
-  it('can strip \\r\\n from stdout and stderr', function(done) {
+
+  it('can strip \\r\\n from stdout and stderr', (done) => {
     nixt({ newlines: false })
-    .cwd(join(__dirname, 'fixtures'))
-    .run('node newlines-crlf.js')
-    .stdout('Hello from newlines-crlf.js')
-    .stderr('Error from newlines-crlf.js')
-    .end(done);
+      .cwd(join(__dirname, 'fixtures'))
+      .run('node newlines-crlf.js')
+      .stdout('Hello from newlines-crlf.js')
+      .stderr('Error from newlines-crlf.js')
+      .end(done);
   });
-  
-  it('can leave \\r\\n in stdout and stderr', function(done) {
+
+  it('can leave \\r\\n in stdout and stderr', (done) => {
     nixt({ newlines: true })
-    .cwd(join(__dirname, 'fixtures'))
-    .run('node newlines-crlf.js')
-    .stdout('Hello \r\nfrom \r\nnewlines-crlf.js')
-    .stderr('Error \r\nfrom \r\nnewlines-crlf.js')
-    .end(done);
+      .cwd(join(__dirname, 'fixtures'))
+      .run('node newlines-crlf.js')
+      .stdout('Hello \r\nfrom \r\nnewlines-crlf.js')
+      .stderr('Error \r\nfrom \r\nnewlines-crlf.js')
+      .end(done);
   });
 });

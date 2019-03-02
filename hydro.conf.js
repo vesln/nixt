@@ -2,13 +2,13 @@
  * External dependencies.
  */
 
-var join = require('path').join;
+const { join } = require('path');
 
 /**
  * Internal dependencies.
  */
 
-var nixt = require('./');
+const nixt = require('./');
 
 /**
  * Nixt template that has the fixtures dir as a CWD.
@@ -28,18 +28,18 @@ function nfixt() {
  * @api public
  */
 
-module.exports = function(hydro) {
+module.exports = function (hydro) {
   hydro.set({
     formatter: 'hydro-dot',
     globals: {
-      nfixt: nfixt,
+      nfixt,
     },
     chai: {
       styles: 'should',
       stack: true,
     },
     tests: [
-      'test/*.test.js'
+      'test/*.test.js',
     ],
     plugins: [
       'hydro-chai',

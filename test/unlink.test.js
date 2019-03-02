@@ -1,17 +1,18 @@
-var fs = require('fs');
-var join = require('path').join;
-var file = join(__dirname, 'tmp', 'writefile-test');
+const fs = require('fs');
+const { join } = require('path');
 
-describe('nixt#unlink', function() {
-  it('removes a file', function(done) {
+const file = join(__dirname, 'tmp', 'writefile-test');
+
+describe('nixt#unlink', () => {
+  it('removes a file', (done) => {
     nfixt()
-    .writeFile(file)
-    .run('node writefile.js')
-    .stdout('File exists')
-    .unlink(file)
-    .after(function() {
-      fs.existsSync(file).should.eq(false);
-    })
-    .end(done);
+      .writeFile(file)
+      .run('node writefile.js')
+      .stdout('File exists')
+      .unlink(file)
+      .after(() => {
+        fs.existsSync(file).should.eq(false);
+      })
+      .end(done);
   });
 });

@@ -1,10 +1,10 @@
-describe('nixt#env', function() {
-  it('sets environemt variables', function(done) {
+describe('nixt#env', () => {
+  it('sets environemt variables', (done) => {
     nfixt()
-    .env('HELLO', 'true')
-    .env('BYE', 'true')
-    .run('node env.js')
-    .code(0)
-    .end(done);
+      .env('HELLO', 'true')
+      .env('BYE', 'true')
+      .run('node env.js')
+      .code(0)
+      .end(done);
   });
 });

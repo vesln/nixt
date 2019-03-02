@@ -1,35 +1,35 @@
-describe('nixt#stderr', function() {
-  it('can assert with strings', function(done) {
+describe('nixt#stderr', () => {
+  it('can assert with strings', (done) => {
     nfixt()
-    .run('node hello-err.js')
-    .stderr('Hello')
-    .end(done);
+      .run('node hello-err.js')
+      .stderr('Hello')
+      .end(done);
   });
 
-  it('returns an error when stderr does not match the desired string', function(done) {
+  it('returns an error when stderr does not match the desired string', (done) => {
     nfixt()
-    .run('node hello-err.js')
-    .stderr('Fail')
-    .end(function(err) {
-      err.message.should.eq('`node hello-err.js`: Expected stderr to match "Fail". Actual: "Hello"');
-      done();
-    });
+      .run('node hello-err.js')
+      .stderr('Fail')
+      .end((err) => {
+        err.message.should.eq('`node hello-err.js`: Expected stderr to match "Fail". Actual: "Hello"');
+        done();
+      });
   });
 
-  it('can assert with regular expressions', function(done) {
+  it('can assert with regular expressions', (done) => {
     nfixt()
-    .run('node hello-err.js')
-    .stderr(/Hell/)
-    .end(done);
+      .run('node hello-err.js')
+      .stderr(/Hell/)
+      .end(done);
   });
 
-  it('returns an error when the regexp does not match the stderr', function(done) {
+  it('returns an error when the regexp does not match the stderr', (done) => {
     nfixt()
-    .run('node hello-err.js')
-    .stderr(/Fail/)
-    .end(function(err) {
-      err.message.should.eq('`node hello-err.js`: Expected stderr to match "/Fail/". Actual: "Hello"');
-      done();
-    });
+      .run('node hello-err.js')
+      .stderr(/Fail/)
+      .end((err) => {
+        err.message.should.eq('`node hello-err.js`: Expected stderr to match "/Fail/". Actual: "Hello"');
+        done();
+      });
   });
 });

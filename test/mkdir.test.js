@@ -1,16 +1,17 @@
-var fs = require('fs');
-var join = require('path').join;
-var dir = join(__dirname, 'tmp', 'mkdir-test');
+const fs = require('fs');
+const { join } = require('path');
 
-describe('nixt#mkdir', function() {
-  it('creates a new directory', function(done) {
+const dir = join(__dirname, 'tmp', 'mkdir-test');
+
+describe('nixt#mkdir', () => {
+  it('creates a new directory', (done) => {
     nfixt()
-    .mkdir(dir)
-    .run('node mkdir.js')
-    .stdout('Directory exists')
-    .after(function() {
-      fs.rmdirSync(dir);
-    })
-    .end(done);
+      .mkdir(dir)
+      .run('node mkdir.js')
+      .stdout('Directory exists')
+      .after(() => {
+        fs.rmdirSync(dir);
+      })
+      .end(done);
   });
 });

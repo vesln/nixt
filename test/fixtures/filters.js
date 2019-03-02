@@ -1,8 +1,8 @@
-var fs = require('fs');
-var join = require('path').join;
+const fs = require('fs');
+const { join } = require('path');
 
-var file1 = join(__dirname, '..', 'tmp', 'file-1');
-var file2 = join(__dirname, '..', 'tmp', 'file-2');
+const file1 = join(__dirname, '..', 'tmp', 'file-1');
+const file2 = join(__dirname, '..', 'tmp', 'file-2');
 
 if (fs.existsSync(file1) && fs.existsSync(file2)) {
   console.log('Files exist');

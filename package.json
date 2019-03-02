@@ -25,11 +25,15 @@
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "chai": "*",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "hydro": "*",
-    "hydro-dot": "*",
-    "hydro-chai": "*",
     "hydro-bdd": "*",
+    "hydro-chai": "*",
+    "hydro-dot": "*",
     "prompt": "^0.2.12"
   },
   "dependencies": {
