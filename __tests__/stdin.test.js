@@ -1,3 +1,5 @@
+const { nfixt } = require('./utils');
+
 describe('nixt#stdin', () => {
   it('no effect if stdin is not used', (done) => {
     nfixt()

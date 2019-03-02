@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { join } = require('path');
+const { nfixt } = require('./utils');
 
 const file1 = join(__dirname, 'tmp', 'file-1');
 const file2 = join(__dirname, 'tmp', 'file-2');
@@ -16,7 +17,7 @@ describe('nixt filters', () => {
       })
       .before((next) => {
         before++;
-        fs.existsSync(file1).should.eq(true);
+        expect(fs.existsSync(file1)).toBe(true);
         fs.writeFile(file2, '', next);
       })
       .after(() => {
@@ -27,11 +28,11 @@ describe('nixt filters', () => {
       .run('node filters.js')
       .stdout('Files exist')
       .end(() => {
-        before.should.eq(2);
-        after.should.eq(1);
+        expect(before).toBe(2);
+        expect(after).toBe(1);
 
-        fs.existsSync(file1).should.eq(false);
-        fs.existsSync(file2).should.eq(false);
+        expect(fs.existsSync(file1)).toBe(false);
+        expect(fs.existsSync(file2)).toBe(false);
 
         done();
       });

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nixt#run throws an error when no command is supplied 1`] = `"Please provide a command to run. Hint: \`nixt#run\`"`;

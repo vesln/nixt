@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { join } = require('path');
+const { nfixt } = require('./utils');
 
 const file = join(__dirname, 'tmp', 'exists-file-test');
 const dir = join(__dirname, 'tmp', 'exists-dir-test');
@@ -19,7 +20,8 @@ describe('nixt#exist', () => {
       .run('node void.js')
       .exist(file)
       .end((err) => {
-        (err !== null).should.eq(true);
+        // (err !== null).should.eq(true);
+        expect(err).not.toBeNull();
         done();
       });
   });
@@ -38,7 +40,7 @@ describe('nixt#exist', () => {
       .run('node void.js')
       .exist(dir)
       .end((err) => {
-        (err !== null).should.eq(true);
+        expect(err).not.toBeNull();
         done();
       });
   });

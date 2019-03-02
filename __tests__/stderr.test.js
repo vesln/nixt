@@ -1,3 +1,5 @@
+const { nfixt } = require('./utils');
+
 describe('nixt#stderr', () => {
   it('can assert with strings', (done) => {
     nfixt()
@@ -11,7 +13,7 @@ describe('nixt#stderr', () => {
       .run('node hello-err.js')
       .stderr('Fail')
       .end((err) => {
-        err.message.should.eq('`node hello-err.js`: Expected stderr to match "Fail". Actual: "Hello"');
+        expect(err.message).toBe('`node hello-err.js`: Expected stderr to match "Fail". Actual: "Hello"');
         done();
       });
   });
@@ -28,7 +30,7 @@ describe('nixt#stderr', () => {
       .run('node hello-err.js')
       .stderr(/Fail/)
       .end((err) => {
-        err.message.should.eq('`node hello-err.js`: Expected stderr to match "/Fail/". Actual: "Hello"');
+        expect(err.message).toBe('`node hello-err.js`: Expected stderr to match "/Fail/". Actual: "Hello"');
         done();
       });
   });

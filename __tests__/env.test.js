@@ -1,3 +1,5 @@
+const { nfixt } = require('./utils');
+
 describe('nixt#env', () => {
   it('sets environemt variables', (done) => {
     nfixt()

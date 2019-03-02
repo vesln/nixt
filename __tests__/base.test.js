@@ -1,3 +1,5 @@
+const { nfixt } = require('./utils');
+
 describe('nixt#base', () => {
   it('sets a base command', (done) => {
     nfixt()

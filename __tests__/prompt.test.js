@@ -1,3 +1,5 @@
+const { nfixt } = require('./utils');
+
 describe('nixt', () => {
   it('can respond to prompts ending in a literal string', (done) => {
     nfixt()

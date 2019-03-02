@@ -2,8 +2,6 @@
 # Paths
 #
 
-TEST_EXEC=node_modules/.bin/hydro
-
 #
 # All
 #
@@ -22,7 +20,7 @@ install:
 #
 
 test:
-	@NODE_ENV=test $(TEST_EXEC)
+	npm test -s
 
 #
 # Clean

@@ -1,5 +1,6 @@
 const nixt = require('..');
 const { join } = require('path');
+const { nfixt } = require('./utils');
 
 describe('nixt', () => {
   it('can strip \\n from stdout and stderr', (done) => {
