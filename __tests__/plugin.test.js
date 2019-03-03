@@ -1,20 +1,18 @@
 const nixt = require('..');
-const should = require('chai').should();
 
 describe('nixt.register', () => {
   it('can register a single function', () => {
-    const fn = function () {};
+    const fn = () => 'registered';
     nixt.register('foo', fn);
-    nixt.should.respondTo('foo');
+    expect(nixt().foo()).toBe('registered');
   });
 
   it('can register multiple functions at once', () => {
-    const fn = function () {};
-    const fn1 = function () {};
+    const fn = () => 'first';
+    const fn2 = () => 'second';
 
-    nixt.register({ baz: fn, bar: fn1 });
-
-    nixt.should.respondTo('baz');
-    nixt.should.respondTo('bar');
+    nixt.register({ baz: fn, bar: fn2 });
+    expect(nixt().baz()).toBe('first');
+    expect(nixt().bar()).toBe('second');
   });
 });

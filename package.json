@@ -27,11 +27,11 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "jest": "^24.1.0",
-    "prompt": "^0.2.12"
+    "prompt": "^1.0.0"
   },
   "dependencies": {
-    "assertion-error": "~1.0.0",
-    "clone": "^1.0.2",
+    "assertion-error": "~1.1.0",
+    "clone": "^2.1.2",
     "shell-quote": "^1.4.1"
   }
 }
