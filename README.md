@@ -332,6 +332,17 @@ nixt()
 .end(fn);
 ```
 
+### #notExist
+
+Check if a given path does not exist (works with both files and directories).
+
+```js
+nixt()
+.run('rm /tmp/file')
+.notExist('/tmp/file')
+.end(fn);
+```
+
 ### #match
 
 Check the contents of a file.
